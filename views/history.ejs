@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>History Purchased</title>
+
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+        }
+        table {
+            border-collapse: collapse;
+            width: 100%;
+        }
+
+        th,
+        td {
+            text-align: left;
+            padding: 8px;
+        }
+
+        tr:nth-child(even) {
+            background-color: #f2f2f2
+        }
+
+        th {
+            background-color: #04708b;
+            color: white;
+        }
+
+        .button {
+            background-color: #04708b;
+            /* Green */
+            border: none;
+            color: white;
+            padding: 10px 15px;
+            text-align: center;
+            text-decoration: none;
+            display: inline-block;
+            font-size: 16px;
+            border-radius: 8px;
+
+        }
+
+        a {
+            color: rgb(32, 25, 15);
+        }
+    </style>
+    </style>
+</head>
+
+<body>
+    <%- include('partials/headerBuyer') %>
+    <table>
+        <tr>
+            <th>No</th>
+            <th>Name</th>
+            <th>Product</th>
+            <th>Price</th>
+            <th>Date</th>
+        </tr>
+        <% data.forEach((val,index)=>{ %>
+        <tr>
+            <td><%= index+1 %>. </td>
+            <td><%= val.User.name %></td>
+            <td><%= val.Product.name %></td>
+            <td><%= val.Product.price %></td>
+            <td><%= val.Product.createdAt %></td>
+        </tr>
+        <%  })%>
+    </table>
+
+</body>
+
+</html>

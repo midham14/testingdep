@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+        }
+        .edit-product-form{
+            display: flex;
+            flex-direction: column;
+            width: 30%;
+        }
+        .edit-product-form > input , .edit-product-form > button{
+            margin: 3px;
+            justify-content: center;
+            text-align: center;
+            height: 25px;
+        }
+        .edit-product-form > textarea{
+            margin: 3px;
+            justify-content: center;
+            text-align: center;
+        }
+
+        .edit-product-form > center> button{
+            width: 120px;
+            height: 40px;
+            background-color: transparent;
+            border: 1px solid #3581b8;
+            color: #3581b8;
+            margin-top: 30px;
+        }
+        .edit-product-form > center> button:hover{
+            width: 120px;
+            height: 40px;
+            background-color: #3581b8;
+            border: transparent;
+            color: white;
+            margin-top: 30px;
+        }
+    </style>
+</head>
+<body>
+    <div class="header-admin">
+        <%- include('partials/headerAdmin.ejs') %>
+    </div>
+    <center>
+        <form action="/admin/editproduct/<%= data.id %>" method="POST" enctype="multipart/form-data">
+            <div class="edit-product-form">
+                <input type="text" name="name" placeholder="product name" value="<%= data.name %>">
+                <textarea name="description" rows="4" cols="50" placeholder="product description" value="<%= data.description %>"><%= data.description %></textarea>
+                <input type="text" name ="price" placeholder="input your price" value="<%= data.price %>"> 
+                <input type="file" name="image" value="<%= data.image %>">
+                <center><button type="submit">SUBMIT</button></center>
+            </div>
+        </form>
+    </center>
+</body>
+</html>

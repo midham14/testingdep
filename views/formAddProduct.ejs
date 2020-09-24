@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+        }
+        .header-admin{
+            color: pink;
+            background-color: black;
+            width: 100%;
+            height: 7vh;
+            margin-bottom: 40px;
+        }
+        .add-product-form{
+            display: flex;
+            flex-direction: column;
+            width: 30%;
+        }
+        .add-product-form > input , .add-product-form > button{
+            margin: 3px;
+            justify-content: center;
+            text-align: center;
+            height: 25px;
+        }
+        .add-product-form > textarea{
+            margin: 3px;
+            justify-content: center;
+            text-align: center;
+        }
+
+        .add-product-form > center> button{
+            width: 120px;
+            height: 40px;
+            background-color: transparent;
+            border: 1px solid #3581b8;
+            color: #3581b8;
+            margin-top: 30px;
+        }
+        .add-product-form > center> button:hover{
+            width: 120px;
+            height: 40px;
+            background-color: #3581b8;
+            border: transparent;
+            color: white;
+            margin-top: 30px;
+        }
+
+    </style>
+</head>
+<body>
+    <%- include('partials/headerAdmin.ejs') %>
+    <center>
+        <h2 style="margin-bottom: 10px;">Please Fill the form below</h2>
+        <div class="form-add-product">
+            <form action="/admin/addproduct" method="POST" enctype="multipart/form-data">
+                <div class="add-product-form">
+                    <input type="text" name="name" placeholder="product name">
+                    <textarea name="description" rows="4" cols="50" placeholder="product description"></textarea>
+                    <input type="text" name ="price" placeholder="input your price">
+                    <label for="image" style="margin-top: 10px;">Please upload image for product below</label><input type="file" name="image" id="image">
+                    <center><button type="submit">SUBMIT</button></center>
+                </div>
+            </form>
+        </div>
+    </center>
+</body>
+</html>

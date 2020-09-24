@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+        }
+        Table {
+            width: 70%;
+        }
+        th {
+            background-color: #3581b8;
+            color: white;
+            border-bottom: 1px solid #ddd;
+            height: 50px;
+        }
+        td {
+            height: 7vh;
+            max-height: 10vh;
+            border-bottom: 1px solid #ddd;
+            text-align: center;
+        }
+        tr:nth-child(even) {
+            background-color: #f2f2f2;
+        }
+        .button-add-product{
+            background-color: white;
+            border: 1px solid #3581b8;
+            color: #3581b8;
+            border-radius: 3%;
+            width: 15vh;
+            height: 5vh;
+            padding: 10px;
+        }
+        .button-add-product:hover{
+            background-color: #3581b8;
+            border: 1px solid #3581b8;
+            color: #ebe9e9;
+            border-radius: 3%;
+            width: 15vh;
+            height: 5vh;
+            padding: 10px;
+        }
+        .edit-button-product{
+            width: 60px;
+            height: 3vh;
+            background-color: transparent;
+            border: 1px solid #3581b8;
+            color: #3581b8;
+            border-radius: 3px;
+        }
+        .edit-button-product:hover{
+            width: 60px;
+            height: 3vh;
+            background-color: #3581b8;
+            border: transparent;
+            color: #ebe9e9;
+            border-radius: 3px;
+        }
+        .delete-button-product{
+            width: 60px;
+            height: 3vh;
+            background-color: transparent;
+            border: 1px solid red;
+            color: red;
+            border-radius: 3px;
+        }
+        .delete-button-product:hover{
+            width: 60px;
+            height: 3vh;
+            background-color: red;
+            border: transparent;
+            color: white;
+            border-radius: 3px;
+        }
+    </style>
+</head>
+<body>
+    <%- include('partials/headerAdmin.ejs') %>
+    <center>
+        <a href="/admin/addproduct"><button class="button-add-product">Add Product</button></a><br><br>
+        <Table>
+            <tr>
+                <th>Nama Product</th>
+                <th>Description</th>
+                <th>Price</th>
+                <th>Image</th>
+                <th>Action</th>
+            </tr>
+            <% data.forEach(val=>{ %>
+                <tr>
+                    <td><%= val.name %></td>
+                    <td><%= val.description %></td>
+                    <td><%= val.price %></td>
+                    <td><img src="/uploads/<%= val.image %>" alt="" width="100px"></td>
+                    <td>
+                        <a href="/admin/editproduct/<%=val.id%>"><button class="edit-button-product">Edit</button></a>
+                        <a href="/admin/delete/<%= val.id %>"><button class="delete-button-product" onClick="return confirm('are you sure want to delete <%= val.name %>')">Delete</button></a>
+                    </td>
+                </tr>
+         <%   })%>
+        </Table>
+
+    </center>
+</body>
+</html>

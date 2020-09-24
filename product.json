@@ -1,0 +1,32 @@
+[
+  {
+    "name": "Yozo",
+    "description": "New Yozo is coming !",
+    "price": 2000000,
+    "image": "/SNEAKERSPRODUCT1600885360417.jpg"
+  },
+  {
+    "name": "NMMD",
+    "description": "Good Sneakers",
+    "price": 2000000,
+    "image": "/SNEAKERSPRODUCT1600886315433.jpg"
+  },
+  {
+    "name": "Yeeza",
+    "description": "Kanye East Next Level Sneakers",
+    "price": 10000000,
+    "image": "/SNEAKERSPRODUCT1600933254265.jpg"
+  },
+  {
+    "name": "Yeezo",
+    "description": "Kanye North Next Level Sneakers",
+    "price": 15000000,
+    "image": "/SNEAKERSPRODUCT1600933260674.jpg"
+  },
+  {
+    "name": "Stan Smith",
+    "description": "Stan SMith snekers",
+    "price": 2000000,
+    "image": "/SNEAKERSPRODUCT1600933982934.jpg"
+  }
+]

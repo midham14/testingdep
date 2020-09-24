@@ -1,0 +1,56 @@
+[
+  {
+    "name": "user",
+    "email": "user@gmail.com",
+    "password": "user",
+    "address": "user address",
+    "level": "user",
+    "createdAt": "2020-09-23T14:57:57.015Z",
+    "updatedAt": "2020-09-23T14:57:57.015Z"
+  },
+  {
+    "name": "albarmo",
+    "email": "moerhamsa@gmail.com",
+    "password": "albarmo",
+    "address": "Jakarta Selatan",
+    "level": "user",
+    "createdAt": "2020-09-23T14:57:57.015Z",
+    "updatedAt": "2020-09-23T14:57:57.015Z"
+  },
+  {
+    "name": "idham",
+    "email": "idhamdummy1@gmail.com",
+    "password": "123",
+    "address": "Bekasi",
+    "level": "user",
+    "createdAt": "2020-09-24T13:59:49.132Z",
+    "updatedAt": "2020-09-24T13:59:49.132Z"
+  },
+  {
+    "name": "idham",
+    "email": "idhamdummy1@gmail.com",
+    "password": "9aa82788e3f88be651a1fb8d83362884707440336fb882d69270b882d687794f",
+    "address": "Bekasi",
+    "level": "user",
+    "createdAt": "2020-09-24T16:31:09.079Z",
+    "updatedAt": "2020-09-24T16:31:09.079Z"
+  },
+  {
+    "name": "admin",
+    "email": "user@gmail.com",
+    "password": "9aa82788e3f88be651a1fb8d83362884707440336fb882d69270b882d687794f",
+    "address": "admin address",
+    "level": "admin",
+    "createdAt": "2020-09-23T14:57:57.015Z",
+    "updatedAt": "2020-09-23T14:57:57.015Z"
+  },
+  {
+    "name": "idham2",
+    "email": "idhamdummy2@gmail.com",
+    "password": "9aa82788e3f88be651a1fb8d83362884707440336fb882d69270b882d687794f",
+    "address": "Bekasi Raya",
+    "level": "user",
+    "createdAt": "2020-09-24T18:34:37.405Z",
+    "updatedAt": "2020-09-24T18:34:37.405Z"
+  }
+]

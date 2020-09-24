@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        .grid-container {
+            display: grid;
+            grid-template-columns: auto auto;
+            padding: 10px;
+        }
+
+        .grid-item {
+            height: 30vh;
+            margin: 20px 30px 20px 30px;
+            padding: 30px;
+            -webkit-box-shadow: 10px 10px 30px -15px rgba(53,129,184,1);
+            -moz-box-shadow: 10px 10px 30px -15px rgba(53,129,184,1);
+            box-shadow: 10px 10px 30px -15px rgba(53,129,184,1);
+        }
+        .image-box {
+            width: 50%;
+            height: 20vh;
+            max-height: 25vh;
+        }
+        .checkout-button{
+            height: 35px;
+            width: 150px;
+            margin-top: 10px;
+            border: #3581b8 1px solid;
+            color: #3581b8 ;
+            background-color: transparent;
+        }
+        .checkout-button:hover{
+            height: 35px;
+            width: 150px;
+            margin-top: 10px;
+            border: #3581b8 1px solid;
+            color: white ;
+            background-color: #3581b8;
+        }
+    </style>
+</head>
+
+<body>
+    <%- include('partials/headerBuyer.ejs') %>
+    <div class="grid-container">
+        <% data.forEach(val=>{ %>
+        <div class="grid-item">
+            <center>
+                <div class="image-box">
+                    <img src="/uploads/<%= val.image %>" alt="" width="150px">
+                </div>
+            </center>
+            <center>
+                <div> <%= val.name %> </div>
+            </center>
+            <center>
+                <div> <%= val.description %></div>
+            </center>
+            <center>
+                <div> Rp. <%= val.getFormated() %></div>
+            </center>
+            <center>
+                <div>
+                    <a href="/checkout/<%= val.id %>" style="text-decoration: none;"><button class="checkout-button">Checkout</button></a>
+                </div>
+            </center>
+        </div>
+        <%  })%>
+    </div>
+</body>
+
+</html>

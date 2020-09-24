@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: sans-serif;
+            background: #f3f8f2;
+        }
+
+        .box {
+            width: 23%;
+            height: 520px;
+            position: absolute;
+            border-radius: 10px;
+            top: 50%;
+            left: 50%;
+            padding-top: 0px;
+            transform: translate(-50%, -50%);
+            background: #3581b8;
+            text-align: center;
+        }
+
+        .box input[type="email"],
+        .box input[type="text"],
+        .box input[type="password"] {
+            border: 0;
+            background: none;
+            display: block;
+            margin: 20px auto;
+            text-align: center;
+            border: 2px solid rgb(255, 255, 255);
+            width: 200px;
+            height: 25px;
+            outline: none;
+            color: rgb(0, 0, 0);
+            border-radius: 5px;
+            transition: 0.40s;
+        }
+
+        .box h1 {
+            color: wheat;
+            text-transform: capitalize;
+            font-weight: 500;
+            font-size: 3em;
+        }
+
+        .box p,
+        a {
+            color: wheat;
+            text-decoration: none;
+        }
+
+        .box label {
+            color: wheat;
+            text-transform: capitalize;
+            font-weight: 500;
+            font-size: 1.2em;
+        }
+
+        .box input[type="email"]:focus,
+        .box input[type="text"]:focus,
+        .box input[type="password"]:focus {
+            border: 0;
+            background: none;
+            display: block;
+            margin: 20px auto;
+            text-align: center;
+            border: 2px solid rgb(255, 255, 255);
+            width: 100px;
+            outline: none;
+            padding: 14px 10px;
+            background-color: white;
+            border-radius: 15px;
+            transition: 0.25s;
+            width: 300px;
+            border-color: rgb(255, 255, 255);
+        }
+
+        .box input[type="submit"] {
+            border: 0;
+            background: none;
+            display: block;
+            margin: 20px auto;
+            text-align: center;
+            border: 2px solid rgb(253, 253, 253);
+            padding: 14px 10px;
+            outline: none;
+            color: wheat;
+            border-radius: 20px;
+            transition: 0.25s;
+        }
+
+        .box input[type="submit"]:hover {
+            background: teal;
+        }
+
+        .button {
+            background: white;
+            width: 120px;
+            height: 40px;
+            border: none;
+            border-radius: 10px;
+        }
+
+        .image {
+            width: 23%;
+            height: 500px;
+            border-radius: 10px;
+            position: absolute;
+            padding-top: 0px;
+            background: #3581b8;
+            text-align: center;
+            top: 22.1%;
+            left: 60%;
+        }
+    </style>
+
+
+</head>
+
+<body>
+
+    <form action="/login" method="post" class="box">
+        <h1>LOGIN</h1>
+        <br>
+
+        <label for="name">Username</label><br>
+        <input type="text" name="name">
+        <br>
+        <label for="password">Password</label><br>
+        <input type="password" name="password">
+
+        <br><button type="submit" class="button">Login</button>
+
+        <br>
+        <br>
+        <br>
+        <p>dont have account? <a href="/register">Register Now</a></p>
+    </form>
+
+
+</body>
+
+</html>
